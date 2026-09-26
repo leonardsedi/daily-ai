@@ -53,7 +53,7 @@ if prompt := st.chat_input(f"Ask me anything, {user_name}..."):
     with st.chat_message("assistant"):
         with st.spinner("Thinking..."):
             response = client.chat.completions.create(
-                model="openai/gpt-oss-20b",
+                model="llama-3.3-70b-versatile",
                 messages=st.session_state.messages,
                 max_tokens=1000,
                 temperature=0.7
